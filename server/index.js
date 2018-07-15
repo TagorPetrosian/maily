@@ -2,9 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
-const keys = require("./server/config/keys");
-require("./server/models/User");
-require("./server/services/passport");
+const keys = require("./config/keys");
+require("./models/User");
+require("./services/passport");
 
 mongoose.connect(
   keys.mongoURI,
@@ -22,7 +22,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./server/routes/authRoutes")(app);
+require("./routes/authRoutes")(app);
 
 const PORT = process.env.PORT || 5000;
 
