@@ -1,2 +1,2 @@
 # maily
-Maily - a survey website with node and react
+A survey website with node and react
