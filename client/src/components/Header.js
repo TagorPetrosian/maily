@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 
-class Header extends Comment {
+class Header extends Component {
   render() {
     return (
       <div>
-        <h2>Header</h2>
+        <nav>
+          <div className="nav-wrapper">
+            <a className="left brand-logo">Maily</a>
+            <ul className="right">
+              <li>
+                <a>Login with Google</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     );
   }
 }
+
+export default Header;
