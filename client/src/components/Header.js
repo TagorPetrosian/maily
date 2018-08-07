@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import authReducer from "../reducers/authReducer";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   renderContent() {
@@ -26,7 +26,12 @@ class Header extends Component {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <a className="left brand-logo">Maily</a>
+            <Link
+              to={this.props.auth ? "/surveys" : "/"}
+              className="left brand-logo"
+            >
+              Maily
+            </Link>
             <ul className="right">{this.renderContent()}</ul>
           </div>
         </nav>
